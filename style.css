@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background-image: url(WhatsApp\ Image\ 2025-03-29\ at\ 21.31.03_4b36af66.jpg);
+  }
+  
+  h1 {
+    color: #4b0082; /* IPL purple */
+  }
+  
+  h2 {
+    color: white;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #ff4500; /* IPL orange */
+    color: white;
+  }
+  
+  form {
+    margin: 20px;
+  }
+  
+  input, select, button {
+    padding: 8px;
+    margin: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff4500;
+  }
+  
+  a {
+    color: #4b0082;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ff4500;
+  }
