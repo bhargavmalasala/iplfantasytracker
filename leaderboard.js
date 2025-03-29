@@ -115,10 +115,19 @@ function updateScoreTable(scores) {
   // For each date, find the winner and display all scores
   sortedDates.forEach(date => {
     const dateScores = scoresByDate[date];
+    
+    // Find max points for this date
     const maxPoints = Math.max(...dateScores.map(s => s.points));
     
+    // Sort scores descending for this date
     dateScores.sort((a, b) => b.points - a.points).forEach(score => {
       const row = tbody.insertRow();
+      
+      // Highlight winner row
+      if (score.points === maxPoints) {
+        row.style.backgroundColor = "#f0fff0"; // Light green background
+      }
+      
       row.insertCell().textContent = score.date;
       row.insertCell().textContent = score.name;
       row.insertCell().textContent = score.points;
@@ -130,22 +139,9 @@ function updateScoreTable(scores) {
     const cell = separator.insertCell();
     cell.colSpan = 4;
     cell.style.height = "10px";
+    cell.style.backgroundColor = "#f0f0f0"; // Gray separator
   });
 }
-// Update score table
-function updateScoreTable(scores) {
-  const tbody = document.querySelector("#scoreTable tbody");
-  tbody.innerHTML = "";
-  
-  scores.forEach(score => {
-    const row = tbody.insertRow();
-    row.insertCell().textContent = score.date;
-    row.insertCell().textContent = score.name;
-    row.insertCell().textContent = score.points;
-    row.insertCell().textContent = score.winner ? "🏆 Winner" : "";
-  });
-}
-
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', () => {
   setupRealTimeListener();
