@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IPL 2025 Fantasy Leaderboard</title>
-        <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>IPL 2025 Fantasy Leaderboard</h1>
-  <p>Updated as of <span id="currentDate"></span></p>
-  <p><a href="admin.html">Admin Login</a></p>
-  
-  <h2>Leaderboard</h2>
-  <table id="leaderboardTable">
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Name</th>
-        <th>Wins</th>
-        <th>Total Points</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL 2025 Fantasy Leaderboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="ipl-logo-new-old.avif" alt="" />
+      <h1>IPL 2025 Fantasy Leaderboard</h1>
+      <p><a href="admin.html">Admin Login</a></p>
+    </div>
+    <p>Updated as of <span id="currentDate"></span></p>
 
-  <h2>Scores by Match</h2>
-  <table id="scoreTable">
-    <thead>
-      <tr>
-        <th>Match Date</th>
-        <th>Name</th>
-        <th>Fantasy Points</th>
-        <th>Result</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+    <h2>Leaderboard</h2>
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Wins</th>
+          <th>Total Points</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
+    <h2>Scores by Match</h2>
+    <table id="scoreTable">
+      <thead>
+        <tr>
+          <th>Match Date</th>
+          <th>Name</th>
+          <th>Fantasy Points</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-  <script src="leaderboard.js"></script>
-</body>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="leaderboard.js"></script>
+  </body>
 </html>
